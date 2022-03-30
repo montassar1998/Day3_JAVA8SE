@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Day3 {
 
@@ -11,6 +12,46 @@ public class Day3 {
         return op.calc(x, y);
     }
     public static void main(String[] args) {
+        // Read data from user keyboard using the Scanner
+        int month,year;
+        Scanner s = new Scanner(System.in);
+
+        do {
+            System.out.println("give me a month");
+            month = s.nextInt();
+        }while(month>12 || month<1);
+
+        do {
+            System.out.println("give me a year");
+            year = s.nextInt();
+        }while(year <1970);
+        s.close();
+        System.out.println("le num est = "+month+ " year " + year);
+        switch(month){
+            case 1:System.out.println("January "+ year + " 31 days"); break;
+            case 2: if (year%4==0) {
+                        System.out.println("February "+ year + " 29 days");
+                    }
+                    else {
+                        System.out.println("February "+ year + " 29 days");
+            }break;
+
+            case 3:System.out.println("March "+ year + " 31 days"); break;
+            case 4:System.out.println("April "+ year + " 31 days"); break;
+            case 5:System.out.println("May "+ year + " 31 days"); break;
+            case 6:System.out.println("June "+ year + " 31 days"); break;
+            case 7:System.out.println("July "+ year + " 31 days"); break;
+            case 8:System.out.println("August "+ year + " 31 days"); break;
+            case 9:System.out.println("September "+ year + " 31 days"); break;
+            case 10:System.out.println("October "+ year + " 31 days"); break;
+            case 11:System.out.println("November "+ year + " 30 days"); break;
+            case 12:System.out.println("December "+ year + " 31 days"); break;
+            default:break;
+
+
+        }
+
+
         int i=1;
         int j = i++ + i++;
         long l = i;
@@ -60,10 +101,10 @@ public class Day3 {
             case 10:System.out.println("Dix");break;
             default:System.out.println("Unknown");break;
         }
-        final String s = "abax";
-        switch(s){
+        final String e = "abax";
+        switch(e){
 
-            case s:
+            case e:
             case "ab":System.out.println("S is equal to AB");break;
             default : System.out.println("Default");break;
         }
@@ -113,6 +154,10 @@ public class Day3 {
         OUTER_LOOP: for(int k=0;k<tab.length;k++){
             INNER_LOOP:for(int inner=0;inner<tab.length;inner++){
                 System.out.println(" k = "+ k + " x = "+inner);
+                // break vs break with a label name
+                // break jumps to the next code bloc whereas break with a label name jumps to whatever bloc even in a higher hierarchy
+
+                break OUTER_LOOP;
             }
             //this code display the elements k and l (the values)
 
@@ -121,6 +166,10 @@ public class Day3 {
         for(int a:tab){
             System.out.println(a);
         }
+
+
+        //file operations
+
 
     }
 }
