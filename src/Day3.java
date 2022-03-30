@@ -11,6 +11,8 @@ public class Day3 {
     private static int calculer(int x, int y, Operation op) {
         return op.calc(x, y);
     }
+
+
     public static void main(String[] args) {
         // Read data from user keyboard using the Scanner
         int month,year;
