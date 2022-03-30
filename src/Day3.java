@@ -10,6 +10,9 @@ public class Day3 {
         byte b= (byte) 127;
         // short is coded on 16 bits
         // It has a minimum value of -32,768 and a maximum value of 32,767 (inclusive).
-        System.out.println(b);
+        int x= 3;
+        int y=++x*5/x--+--x;
+
+        System.out.println(y);
     }
 }
