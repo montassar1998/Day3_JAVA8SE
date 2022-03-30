@@ -40,13 +40,30 @@ public class Day3 {
         System.out.println("8 / 2 = " + calculer(8, 2, division));
 
         //control structures and loops
-        int hour = 10;
+        final int hour = 2;
 
 
         if(hour<11){
             System.out.println("Good morning");
         }else{
 
+        }
+
+        switch(hour){
+            case 2:
+                case 3:System.out.println("Two");break;
+            case 4:System.out.println("Four");break;
+            case 6:System.out.println("Six");break;
+            case 8:System.out.println("Eight");break;
+            case 10:System.out.println("Dix");break;
+            default:System.out.println("Unknown");break;
+        }
+        final String s = "abax";
+        switch(s){
+
+            case s:
+            case "ab":System.out.println("S is equal to AB");break;
+            default : System.out.println("Default");break;
         }
 
     }
